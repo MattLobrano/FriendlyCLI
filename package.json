@@ -1,0 +1,16 @@
+{
+  "name": "friendlycli",
+  "version": "1.0.0",
+  "description": "A beginner-friendly terminal interface app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Matt Lobrano",
+  "license": "MIT",
+  "dependencies": {
+    "@xterm/xterm": "^5.5.0",
+    "electron": "^25.9.8",
+    "xterm": "^5.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+[
+  { "name": "List Files (Windows)", "command": "dir" },
+  { "name": "List Files (Mac/Linux)", "command": "ls -la" },
+  { "name": "Show Current Directory", "command": "pwd" },
+  { "name": "Check Node Version", "command": "node -v" },
+  { "name": "Check NPM Version", "command": "npm -v" },
+  { "name": "Show Date", "command": "date" },
+  { "name": "Ping Google", "command": "ping google.com" },
+  { "name": "System Info (Windows)", "command": "systeminfo" },
+  { "name": "Disk Usage (Mac/Linux)", "command": "df -h" }
+]
