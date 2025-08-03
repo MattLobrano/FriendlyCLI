@@ -26,8 +26,7 @@ term.onData(data => {
   }
 });
 
-// Receive command output from main
-window.electronAPI.onCommandOutput((data) => {
+window.electronAPI.onCommandOutput(data => {
   term.write(data);
 });
 

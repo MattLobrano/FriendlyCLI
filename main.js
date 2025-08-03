@@ -16,7 +16,6 @@ function createWindow() {
   win.loadFile(path.join(__dirname, 'renderer', 'index.html'));
 }
 
-// Listen for commands from renderer
 ipcMain.on('run-command', (event, command) => {
   exec(command, (error, stdout, stderr) => {
     if (error) {

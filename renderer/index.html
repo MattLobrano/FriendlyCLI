@@ -4,66 +4,22 @@
   <meta charset="UTF-8" />
   <title>FriendlyCLI</title>
   <style>
-    body, html {
-      margin: 0; padding: 0; height: 100%; font-family: monospace;
-      display: flex; flex-direction: column;
-    }
-    #top-bar {
-      background: #222; color: white; padding: 8px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    #toggle-recipes-btn {
-      background: #444; color: white; border: none; padding: 6px 12px;
-      cursor: pointer; border-radius: 4px;
-    }
-    #search-input {
-      flex: 1;
-      padding: 6px 8px;
-      font-size: 14px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    #app {
-      flex: 1; display: flex; height: calc(100vh - 40px);
-      overflow: hidden;
-    }
-    #recipes-panel {
-      width: 250px;
-      border-right: 1px solid #ccc;
-      padding: 10px;
-      overflow-y: auto;
-      background: #f4f4f4;
-      transition: transform 0.3s ease;
-    }
-    #recipes-panel.hidden {
-      transform: translateX(-260px);
-    }
-    #terminal-container {
-      flex: 1;
-      background: black;
-    }
-    ul { list-style: none; padding: 0; margin-top: 10px; }
-    li {
-      cursor: pointer;
-      margin-bottom: 8px;
-      padding: 6px;
-      background: white;
-      border-radius: 4px;
-      transition: background 0.2s;
-    }
-    li:hover {
-      background: #d0ebff;
-    }
+    body, html { margin: 0; height: 100%; display: flex; flex-direction: column; font-family: monospace; }
+    #top-bar { background: #222; color: white; padding: 8px; display: flex; gap: 10px; }
+    #app { flex: 1; display: flex; }
+    #recipes-panel { width: 250px; background: #f4f4f4; padding: 10px; overflow-y: auto; }
+    #terminal-container { flex: 1; background: black; }
+    li { background: white; padding: 5px; margin: 5px 0; cursor: pointer; border-radius: 4px; }
+    li:hover { background: #d0ebff; }
   </style>
 </head>
 <body>
   <div id="top-bar">
-    <button id="toggle-recipes-btn">Toggle Recipes</button>
-    <input id="search-input" type="text" placeholder="Search commands..." />
+    <input id="search-input" type="text" placeholder="Search commands..." style="flex:1;">
   </div>
   <div id="app">
     <div id="recipes-panel">
-      <h2>Command Recipes</h2>
+      <h3>Command Recipes</h3>
       <ul id="recipes-list"></ul>
     </div>
     <div id="terminal-container"></div>

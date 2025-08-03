@@ -1,12 +1,11 @@
 const recipesList = document.getElementById('recipes-list');
 const searchInput = document.getElementById('search-input');
-const toggleBtn = document.getElementById('toggle-recipes-btn');
-const recipesPanel = document.getElementById('recipes-panel');
 
 const recipes = [
-  { name: 'List Files', command: 'dir' },
+  { name: 'List Files', command: process.platform === 'win32' ? 'dir' : 'ls -la' },
   { name: 'Current Directory', command: 'pwd' },
-  { name: 'Node Version', command: 'node -v' }
+  { name: 'Node Version', command: 'node -v' },
+  { name: 'NPM Version', command: 'npm -v' }
 ];
 
 function loadRecipes(list) {
@@ -24,10 +23,6 @@ function loadRecipes(list) {
 searchInput.addEventListener('input', e => {
   const term = e.target.value.toLowerCase();
   loadRecipes(recipes.filter(r => r.name.toLowerCase().includes(term)));
-});
-
-toggleBtn.addEventListener('click', () => {
-  recipesPanel.classList.toggle('hidden');
 });
 
 loadRecipes(recipes);
